@@ -11,7 +11,7 @@ Backend REST API for the simple e-commerce app. Uses in-memory storage (no datab
 
 ## Project Structure
 
-\`\`\`
+```
 backend/
  ├── src/main/java/com/ecommerce/
  │    ├── EcommerceApplication.java
@@ -25,32 +25,32 @@ backend/
  ├── .env.example
  ├── .gitignore
  └── pom.xml
-\`\`\`
+```
 
 ## Environment Variables
 
-Create a \`.env\` file (copy from \`.env.example\`):
+Create a `.env` file (copy from `.env.example`):
 
-\`\`\`
+```
 PORT=8080
 APP_NAME=EcommerceApp
 CORS_ALLOWED_ORIGINS=http://localhost:5173
-\`\`\`
+```
 
-These are consumed in \`application.properties\`:
+These are consumed in `application.properties`:
 
-\`\`\`
-server.port=\${PORT:8080}
-spring.application.name=\${APP_NAME:EcommerceApp}
-cors.allowed-origins=\${CORS_ALLOWED_ORIGINS:http://localhost:5173}
-\`\`\`
+```
+server.port=${PORT:8080}
+spring.application.name=${APP_NAME:EcommerceApp}
+cors.allowed-origins=${CORS_ALLOWED_ORIGINS:http://localhost:5173}
+```
 
 ## Run
 
-\`\`\`
+```
 mvn clean install
 mvn spring-boot:run
-\`\`\`
+```
 
 Backend runs on http://localhost:8080
 
@@ -66,21 +66,21 @@ Backend runs on http://localhost:8080
 
 ### Demo Credentials
 
-\`\`\`
+```
 username: admin
 password: password
-\`\`\`
+```
 
 ### Example Requests
 
 Login:
-\`\`\`
+```
 POST /api/login
 { "username": "admin", "password": "password" }
-\`\`\`
+```
 
 Add to cart:
-\`\`\`
+```
 POST /api/cart/add
 { "productId": 1 }
-\`\`\`
+```
